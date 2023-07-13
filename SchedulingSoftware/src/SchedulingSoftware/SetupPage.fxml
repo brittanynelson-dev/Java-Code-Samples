@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: LIGHTGRAY;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SchedulingSoftware.SetupController">
+    <children>
+        <Button layoutX="915.0" layoutY="14.0" mnemonicParsing="false" onAction="#logoutBtnAction" style="-fx-border-color: BLACK;" text="Logout">
+            <font>
+                <Font name="Tahoma Bold" size="14.0" />
+            </font>
+        </Button>
+        <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backBtnAction" style="-fx-border-color: BLACK;" text="Back">
+            <font>
+                <Font name="Tahoma Bold" size="14.0" />
+            </font>
+        </Button>
+      <Label layoutX="357.0" layoutY="30.0" text="Account Setup">
+         <font>
+            <Font name="Tahoma" size="45.0" />
+         </font>
+      </Label>
+      <Label layoutX="340.0" layoutY="217.0" text="Please select your current timezone:">
+         <font>
+            <Font name="Tahoma" size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="250.0" layoutY="334.0" mnemonicParsing="false" onAction="#saveBtnAction" prefWidth="220.0" style="-fx-border-color: BLACK;" text="Save">
+         <font>
+            <Font name="Tahoma" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="530.0" layoutY="334.0" mnemonicParsing="false" onAction="#backBtnAction" prefWidth="220.0" style="-fx-border-color: BLACK;" text="Cancel">
+         <font>
+            <Font name="Tahoma" size="20.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="timeZoneCB" layoutX="250.0" layoutY="260.0" prefHeight="40.0" prefWidth="500.0" />
+    </children>
+</AnchorPane>

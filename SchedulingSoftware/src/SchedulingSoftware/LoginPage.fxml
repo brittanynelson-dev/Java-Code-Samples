@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SchedulingSoftware.Controller">
+    <columnConstraints>
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: LIGHTGRAY;">
+            <children>
+                <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="100.0" layoutY="101.0" prefHeight="51.0" prefWidth="800.0" text="Welcome to Schedule Assitant" textAlignment="CENTER" AnchorPane.topAnchor="101.0">
+                    <font>
+                        <Font name="Tahoma" size="60.0" />
+                    </font></Label>
+                <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="430.0" layoutY="268.0" text="Please login:">
+                    <font>
+                        <Font name="Tahoma" size="25.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="usernameTF" layoutX="375.0" layoutY="318.0" prefWidth="250.0" promptText="Username">
+                    <font>
+                        <Font name="Tahoma" size="20.0" />
+                    </font>
+                </TextField>
+            <PasswordField fx:id="passwordPF" layoutX="375.0" layoutY="371.0" prefWidth="250.0" promptText="Password">
+               <font>
+                  <Font name="Tahoma" size="20.0" />
+               </font>
+            </PasswordField>
+                <Button fx:id="loginSubmitBtn" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="400.0" layoutY="439.0" mnemonicParsing="false" onAction="#submitBtnAction" prefWidth="200.0" style="-fx-border-color: BLACK;" text="Submit" textAlignment="CENTER">
+                    <font>
+                        <Font name="Tahoma" size="20.0" />
+                    </font>
+                </Button>
+                <Label fx:id="enUserPassMatchLbl" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="350.0" layoutY="495.0" text="Username and password combination not found." textFill="RED" visible="false">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="esUserPassMatchLbl" layoutX="288.0" layoutY="515.0" text="No se encuentra la combinación de nombre de usuario y contraseña." textFill="RED" visible="false">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="frUserPassMatchLbl" layoutX="277.0" layoutY="515.0" text="La combinaison du nom d'utilisateur et du mot de passe est introuvable." textFill="RED" visible="false">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="altFrUserPassMatchLbl" layoutX="277.0" layoutY="535.0" text="La combinaison du nom d'utilisateur et du mot de passe est introuvable." textFill="RED" visible="false">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="enUserPassBlankLbl" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="362.0" layoutY="495.0" text="Username and/or password cannot be blank." textFill="RED" visible="false">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="esUserPassBlankLbl" layoutX="289.0" layoutY="515.0" text="El nombre de usuario y / o la contraseña no pueden estar en blanco." textFill="RED" visible="false">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="frUserPassBlankLbl" layoutX="283.0" layoutY="515.0" text="Le nom d'utilisateur et / ou le mot de passe ne peuvent pas être vides." textFill="RED" visible="false">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="altFrUserPassBlankLbl" layoutX="283.0" layoutY="535.0" text="Le nom d'utilisateur et / ou le mot de passe ne peuvent pas être vides." textFill="RED" visible="false">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+            <Label fx:id="enInactiveUserLbl" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="244.0" layoutY="495.0" text="Your account is currently disabled. Please contact your administrator for assistance." textFill="RED" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="esInactiveUserLbl" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="142.0" layoutY="515.0" text="Su cuenta está actualmente deshabilitada. Por favor, póngase en contacto con su administrador para obtener ayuda." textFill="RED" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="frInactiveUserLbl" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="181.0" layoutY="515.0" text="Votre compte est actuellement désactivé. Veuillez contacter votre administrateur pour obtenir de l'aide." textFill="RED" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="altFrInactiveUserLbl" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="181.0" layoutY="535.0" text="Votre compte est actuellement désactivé. Veuillez contacter votre administrateur pour obtenir de l'aide." textFill="RED" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="enDBErrorLbl" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="205.0" layoutY="495.0" text="Unable to connect to database. Please try again later. If issue persists, contact technical support." textFill="RED" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="esDBErrorLbl" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="65.0" layoutY="515.0" text="Incapaz de conectar a la base de datos. Por favor, inténtelo de nuevo más tarde. Si el problema persiste, comuníquese con el soporte técnico." textFill="RED" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="frDBErrorLbl" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="88.0" layoutY="515.0" text="Impossible de se connecter à la base de données. Veuillez réessayer plus tard. Si le problème persiste, contactez le support technique." textFill="RED" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="altFrDBErrorLbl" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="88.0" layoutY="535.0" text="Impossible de se connecter à la base de données. Veuillez réessayer plus tard. Si le problème persiste, contactez le support technique." textFill="RED" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+    </children>
+</GridPane>

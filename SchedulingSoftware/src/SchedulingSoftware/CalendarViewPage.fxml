@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: LIGHTGRAY;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SchedulingSoftware.CalendarController">
+    <children>
+        <Button layoutX="915.0" layoutY="14.0" mnemonicParsing="false" onAction="#logoutBtnAction" style="-fx-border-color: BLACK;" text="Logout">
+            <font>
+                <Font name="Tahoma Bold" size="14.0" />
+            </font>
+        </Button>
+        <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backBtnAction" style="-fx-border-color: BLACK;" text="Back">
+            <font>
+                <Font name="Tahoma Bold" size="14.0" />
+            </font>
+        </Button>
+      <Label layoutX="413.0" layoutY="30.0" text="Calendar">
+         <font>
+            <Font name="Tahoma" size="45.0" />
+         </font>
+      </Label>
+      <TabPane layoutX="50.0" layoutY="90.0" prefHeight="450.0">
+         <tabs>
+            <Tab fx:id="weekTab" closable="false" onSelectionChanged="#updateWeekLbl" text="Week">
+               <content>
+                  <GridPane fx:id="weekGridPane" gridLinesVisible="true" layoutX="50.0" layoutY="150.0" prefHeight="360.0" prefWidth="900.0" style="-fx-background-color: WHITE; -fx-border-color: BLACK;">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="174.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="414.0" minHeight="10.0" prefHeight="408.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Sunday">
+                           <font>
+                              <Font name="Tahoma Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="124.0" layoutY="19.0" text="Monday" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Tahoma Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="237.0" layoutY="19.0" text="Tuesday" GridPane.columnIndex="2">
+                           <font>
+                              <Font name="Tahoma Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="349.0" layoutY="19.0" text="Wednesday" GridPane.columnIndex="3">
+                           <font>
+                              <Font name="Tahoma Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="461.0" layoutY="19.0" text="Thursday" GridPane.columnIndex="4">
+                           <font>
+                              <Font name="Tahoma Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="573.0" layoutY="19.0" text="Friday" GridPane.columnIndex="5">
+                           <font>
+                              <Font name="Tahoma Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="685.0" layoutY="19.0" text="Saturday" GridPane.columnIndex="6">
+                           <font>
+                              <Font name="Tahoma Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+               </content>
+            </Tab>
+            <Tab fx:id="monthTab" closable="false" onSelectionChanged="#updateMonthLbl" text="Month">
+               <content>
+                  <GridPane fx:id="monthGridPane" gridLinesVisible="true" layoutX="50.0" layoutY="150.0" prefHeight="360.0" prefWidth="900.0" style="-fx-background-color: WHITE; -fx-border-color: BLACK;">
+                     <children>
+                        <Label text="Sunday">
+                           <font>
+                              <Font name="Tahoma Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="124.0" layoutY="19.0" text="Monday" GridPane.columnIndex="1">
+                           <font>
+                              <Font name="Tahoma Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="237.0" layoutY="19.0" text="Tuesday" GridPane.columnIndex="2">
+                           <font>
+                              <Font name="Tahoma Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="349.0" layoutY="19.0" text="Wednesday" GridPane.columnIndex="3">
+                           <font>
+                              <Font name="Tahoma Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="461.0" layoutY="19.0" text="Thursday" GridPane.columnIndex="4">
+                           <font>
+                              <Font name="Tahoma Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="573.0" layoutY="19.0" text="Friday" GridPane.columnIndex="5">
+                           <font>
+                              <Font name="Tahoma Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="685.0" layoutY="19.0" text="Saturday" GridPane.columnIndex="6">
+                           <font>
+                              <Font name="Tahoma Bold" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="174.0" minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="414.0" minHeight="10.0" prefHeight="408.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="414.0" minHeight="10.0" prefHeight="408.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="414.0" minHeight="10.0" prefHeight="408.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="414.0" minHeight="10.0" prefHeight="408.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="414.0" minHeight="10.0" prefHeight="408.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="414.0" minHeight="10.0" prefHeight="408.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Button layoutX="870.0" layoutY="59.0" mnemonicParsing="false" onAction="#nextBtnAction" prefWidth="80.0" style="-fx-border-color: BLACK;" text="Next">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="782.0" layoutY="59.0" mnemonicParsing="false" onAction="#previousBtnAction" prefWidth="80.0" style="-fx-border-color: BLACK;" text="Previous">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="225.0" layoutY="552.0" mnemonicParsing="false" onAction="#goToApptSchedulingBtnAction" prefWidth="550.0" style="-fx-border-color: BLACK;" text="Go to Appointment Scheduling Page">
+         <font>
+            <Font name="Tahoma Bold" size="17.0" />
+         </font>
+      </Button>
+      <Label fx:id="monthLbl" layoutX="198.0" layoutY="65.0" prefWidth="180.0">
+         <font>
+            <Font name="Tahoma Bold" size="20.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

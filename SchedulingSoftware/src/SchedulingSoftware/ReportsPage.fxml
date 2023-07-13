@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: LIGHTGRAY;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SchedulingSoftware.ReportsController">
+    <children>
+        <Button layoutX="915.0" layoutY="14.0" mnemonicParsing="false" onAction="#logoutBtnAction" style="-fx-border-color: BLACK;" text="Logout">
+            <font>
+                <Font name="Tahoma Bold" size="14.0" />
+            </font>
+        </Button>
+        <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backBtnAction" style="-fx-border-color: BLACK;" text="Back">
+            <font>
+                <Font name="Tahoma Bold" size="14.0" />
+            </font>
+        </Button>
+      <Label layoutX="424.0" layoutY="30.0" text="Reports">
+         <font>
+            <Font name="Tahoma" size="45.0" />
+         </font>
+      </Label>
+        <Button layoutX="250.0" layoutY="145.0" mnemonicParsing="false" onAction="#numApptTypesReportBtnAction" prefWidth="500.0" style="-fx-border-color: BLACK;" text="Number of Appointment Types By Month">
+            <font>
+                <Font name="Tahoma Bold" size="18.0" />
+            </font>
+        </Button>
+        <Button layoutX="250.0" layoutY="285.0" mnemonicParsing="false" onAction="#consultantSchedulesBtnAction" prefWidth="500.0" style="-fx-border-color: BLACK;" text="Consultant Schedules Report">
+            <font>
+                <Font name="Tahoma Bold" size="18.0" />
+            </font>
+        </Button>
+        <Button layoutX="250.0" layoutY="425.0" mnemonicParsing="false" onAction="#cxDBReportBtnAction" prefWidth="500.0" style="-fx-border-color: BLACK;" text="Customer Database Report">
+            <font>
+                <Font name="Tahoma Bold" size="18.0" />
+            </font>
+        </Button>
+        <Label layoutX="347.0" layoutY="119.0" text="Please select the report you would like to run:">
+            <font>
+                <Font name="Tahoma" size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="numApptTypesLbl" layoutX="407.0" layoutY="186.0" text="Which year would you like to view?" visible="false">
+            <font>
+                <Font name="Tahoma" size="12.0" />
+            </font>
+        </Label>
+        <Button fx:id="prevYearBtn" layoutX="250.0" layoutY="220.0" mnemonicParsing="false" onAction="#prevYearBtnAction" prefWidth="150.0" style="-fx-border-color: BLACK;" visible="false">
+            <font>
+                <Font name="Tahoma" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="curYearBtn" layoutX="425.0" layoutY="220.0" mnemonicParsing="false" onAction="#curYearBtnAction" prefWidth="150.0" style="-fx-border-color: BLACK;" visible="false">
+            <font>
+                <Font name="Tahoma" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="nextYearBtn" layoutX="600.0" layoutY="220.0" mnemonicParsing="false" onAction="#nextYearBtnAction" prefWidth="150.0" style="-fx-border-color: BLACK;" visible="false">
+            <font>
+                <Font name="Tahoma" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="futOnlyBtn" layoutX="250.0" layoutY="360.0" mnemonicParsing="false" onAction="#futOnlyBtnAction" prefWidth="150.0" style="-fx-border-color: BLACK;" text="Future Only" visible="false">
+            <font>
+                <Font name="Tahoma" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="monthAndFutBtn" layoutX="425.0" layoutY="360.0" mnemonicParsing="false" onAction="#monthAndFutBtnAction" prefWidth="150.0" style="-fx-border-color: BLACK;" text="This Month and Future" visible="false">
+            <font>
+                <Font name="Tahoma" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="yearAndFutBtn" layoutX="600.0" layoutY="360.0" mnemonicParsing="false" onAction="#yearAndFutBtnAction" prefWidth="150.0" style="-fx-border-color: BLACK;" text="Year To Date and Future" visible="false">
+            <font>
+                <Font name="Tahoma" size="12.0" />
+            </font>
+        </Button>
+        <Label fx:id="conSchedLbl" layoutX="403.0" layoutY="326.0" text="Which type of report would you like?" visible="false">
+            <font>
+                <Font name="Tahoma" size="12.0" />
+            </font>
+        </Label>
+        <Button fx:id="activeOnlyBtn" layoutX="250.0" layoutY="500.0" mnemonicParsing="false" onAction="#activeOnlyBtnAction" prefWidth="220.0" style="-fx-border-color: BLACK;" text="Active Only" visible="false">
+            <font>
+                <Font name="Tahoma" size="12.0" />
+            </font>
+        </Button>
+        <Label fx:id="cxDBLbl" layoutX="403.0" layoutY="466.0" text="Which type of report would you like?" visible="false">
+            <font>
+                <Font name="Tahoma" size="12.0" />
+            </font>
+        </Label>
+        <Button fx:id="allCxBtn" layoutX="530.0" layoutY="500.0" mnemonicParsing="false" onAction="#allCxBtnAction" prefWidth="220.0" style="-fx-border-color: BLACK;" text="All Customers" visible="false">
+            <font>
+                <Font name="Tahoma" size="12.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

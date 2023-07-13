@@ -1,0 +1,53 @@
+/*
+* Created by Brittany Ward for WGU class C482 - Software I  - Inventory Management Program.
+* Last edited 05/24/27
+*/
+
+.root {
+    -fx-accent: black;
+    -fx-focus-color: black;
+}
+
+.scene {
+    -fx-accent: black;
+    -fx-focus-color: black;
+}
+
+.button {
+    -fx-background-color: linear-gradient(WHITE 50%, SILVER 50%);
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-border-color: #333;
+}
+
+.text-field {
+    -fx-prompt-text-fill: #333;
+    -fx-border-color: SILVER;
+}
+
+#PartAP {
+    -fx-background-color: LIGHTGRAY;
+}
+
+#ProdAP {
+    -fx-background-color: LIGHTGRAY;
+}
+
+.table-view {
+    -fx-table-column-border-color: black;
+    -fx-table-header-border-color: gray;
+    -fx-border-color: #808080;
+}
+
+.table-view .column-header .label {
+    -fx-alignment: CENTER-LEFT;
+    -fx-font-weight: NORMAL;
+}
+
+.table-row-cell {
+    -fx-cell-size: 40px;
+}
+
+.table-row-cell .label {
+    -fx-alignment: CENTER;
+}

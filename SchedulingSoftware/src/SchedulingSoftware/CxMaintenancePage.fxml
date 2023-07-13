@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: LIGHTGRAY;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SchedulingSoftware.CxMaintController">
+   <children>
+      <Button layoutX="915.0" layoutY="14.0" mnemonicParsing="false" onAction="#logoutBtnAction" style="-fx-border-color: BLACK;" text="Logout">
+         <font>
+            <Font name="Tahoma Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backBtnAction" style="-fx-border-color: BLACK;" text="Back">
+         <font>
+            <Font name="Tahoma Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="247.0" layoutY="30.0" text="Customer Maintenance">
+         <font>
+            <Font name="Tahoma" size="45.0" />
+         </font>
+      </Label>
+      <TableView fx:id="cxTableView" layoutX="23.0" layoutY="114.0" prefHeight="381.0" prefWidth="953.0">
+        <columns>
+          <TableColumn fx:id="cxIDCol" editable="false" text="ID" />
+          <TableColumn fx:id="cxNameCol" editable="false" prefWidth="220.0" text="Name" />
+            <TableColumn fx:id="cxPhoneCol" editable="false" prefWidth="140.0" text="Phone" />
+            <TableColumn fx:id="cxAddressCol" editable="false" minWidth="0.0" prefWidth="350.0" text="Address" />
+            <TableColumn fx:id="cxCountryCol" editable="false" minWidth="0.0" prefWidth="150.0" text="Country" />
+            <TableColumn fx:id="cxActiveCol" prefWidth="60.0" text="Active?" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button layoutX="232.0" layoutY="530.0" mnemonicParsing="false" onAction="#cxAddBtnAction" style="-fx-border-color: BLACK;" text="Add New">
+         <font>
+            <Font name="Tahoma Bold" size="22.0" />
+         </font>
+      </Button>
+      <Button layoutX="434.0" layoutY="530.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#cxModBtnAction" prefWidth="131.0" style="-fx-border-color: BLACK;" text="Modify">
+         <font>
+            <Font name="Tahoma Bold" size="22.0" />
+         </font>
+      </Button>
+      <Button layoutX="637.0" layoutY="530.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#cxDelBtnAction" prefWidth="131.0" style="-fx-border-color: BLACK;" text="Delete">
+         <font>
+            <Font name="Tahoma Bold" size="22.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

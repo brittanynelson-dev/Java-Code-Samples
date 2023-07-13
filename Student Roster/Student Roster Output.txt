@@ -1,0 +1,20 @@
+"C:\Program Files\Java\jdk1.8.0_102\bin\java" -Didea.launcher.port=7534 "-Didea.launcher.bin.path=C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2016.2.4\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\Java\jdk1.8.0_102\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\rt.jar;D:\Documents\WGU\C169 - Scripting and Programming (Java)\Student Roster\out\production\Student Roster;C:\Program Files (x86)\JetBrains\IntelliJ IDEA Community Edition 2016.2.4\lib\idea_rt.jar" com.intellij.rt.execution.application.AppMain RosterTester
+
+1	First Name: John	Last Name: Smith	Email: John1989@gmail.com	Age: 20	Grades: {88, 79, 59}
+2	First Name: Suzan	Last Name: Erickson	Email: Erickson_1990@gmailcom	Age: 19	Grades: {91, 72, 85}
+3	First Name: Jack	Last Name: Napoli	Email: The_lawyer99yahoo.com	Age: 19	Grades: {85, 84, 87}
+4	First Name: Erin	Last Name: Black	Email: Erin.black@comcast.net	Age: 22	Grades: {91, 98, 82}
+5	First Name: Brittany	Last Name: Ward	Email: bward39@wgu.edu	Age: 28	Grades: {80, 96, 91}
+Invalid emails found:
+Erickson_1990@gmailcom
+The_lawyer99yahoo.com
+John Smith's average grade is 75
+Suzan Erickson's average grade is 82
+Jack Napoli's average grade is 85
+Erin Black's average grade is 90
+Brittany Ward's average grade is 89
+Student Jack Napoli was removed successfully.
+The student ID you entered does not exist in this roster.
+The student could not be removed. Please try again.
+
+Process finished with exit code 0

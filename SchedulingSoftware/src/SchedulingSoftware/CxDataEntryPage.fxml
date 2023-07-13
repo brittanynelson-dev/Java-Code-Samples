@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: LIGHTGRAY;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SchedulingSoftware.CxDataEntryController">
+    <children>
+        <Button layoutX="915.0" layoutY="14.0" mnemonicParsing="false" onAction="#logoutBtnAction" style="-fx-border-color: BLACK;" text="Logout">
+            <font>
+                <Font name="Tahoma Bold" size="14.0" />
+            </font>
+        </Button>
+        <Button fx:id="cxBackBtn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#cxDataBackBtnAction" style="-fx-border-color: BLACK;" text="Back">
+            <font>
+                <Font name="Tahoma Bold" size="14.0" />
+            </font>
+        </Button>
+      <Label fx:id="addCxLbl" layoutX="315.0" layoutY="30.0" text="Add a New Customer" visible="false">
+         <font>
+            <Font name="Tahoma" size="45.0" />
+         </font>
+      </Label>
+      <Label fx:id="modCxLbl" layoutX="274.0" layoutY="30.0" text="Modify Existing Customer" visible="false">
+         <font>
+            <Font name="Tahoma" size="45.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="130.0" text="Customer ID #:">
+         <font>
+            <Font name="Tahoma" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="170.0" text="Name:">
+         <font>
+            <Font name="Tahoma" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="210.0" text="Phone Number:">
+         <font>
+            <Font name="Tahoma" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="250.0" text="Street Address:">
+         <font>
+            <Font name="Tahoma" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="290.0" text="City/Town/Village:">
+         <font>
+            <Font name="Tahoma" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="330.0" text="State/Province:">
+         <font>
+            <Font name="Tahoma" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="370.0" text="Postal Code:">
+         <font>
+            <Font name="Tahoma" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="410.0" text="Country:">
+         <font>
+            <Font name="Tahoma" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="125.0" layoutY="450.0" text="Is Customer Active?">
+         <font>
+            <Font name="Tahoma" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cxIDTF" disable="true" editable="false" focusTraversable="false" layoutX="400.0" layoutY="125.0" prefWidth="500.0">
+         <font>
+            <Font name="Tahoma" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="cxNameTF" layoutX="400.0" layoutY="165.0" prefWidth="500.0">
+         <font>
+            <Font name="Tahoma" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="cxPhoneTF" layoutX="400.0" layoutY="205.0" prefHeight="32.0" prefWidth="500.0" promptText="Enter country code &amp; phone number (ex. +1 111 222 3333)">
+         <font>
+            <Font name="Tahoma" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="cxStreetTF" layoutX="400.0" layoutY="245.0" prefWidth="500.0">
+         <font>
+            <Font name="Tahoma" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="cxCityTF" layoutX="400.0" layoutY="285.0" prefWidth="500.0">
+         <font>
+            <Font name="Tahoma" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="cxStateTF" layoutX="400.0" layoutY="325.0" prefWidth="500.0">
+         <font>
+            <Font name="Tahoma" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="cxZipTF" layoutX="400.0" layoutY="365.0" prefWidth="500.0">
+         <font>
+            <Font name="Tahoma" size="16.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="cxCountryCB" layoutX="400.0" layoutY="405.0" prefWidth="500.0" promptText="Select..." />
+      <ComboBox fx:id="cxActiveFlagCB" layoutX="400.0" layoutY="445.0" prefWidth="500.0" promptText="Select..." />
+      <Button layoutX="150.0" layoutY="520.0" mnemonicParsing="false" onAction="#submitBtnAction" prefWidth="300.0" style="-fx-border-color: BLACK;" text="SUBMIT">
+         <font>
+            <Font name="Tahoma Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="550.0" layoutY="520.0" mnemonicParsing="false" onAction="#clearBtnAction" prefWidth="300.0" style="-fx-border-color: BLACK;" text="CLEAR">
+         <font>
+            <Font name="Tahoma Bold" size="20.0" />
+         </font>
+      </Button>
+      <Label layoutX="426.0" layoutY="486.0" text="*All fields are required" textFill="RED">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="apptBackBtn" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#apptCxBackBtnAction" style="-fx-border-color: BLACK;" text="Back" visible="false">
+         <font>
+            <Font name="Tahoma Bold" size="14.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

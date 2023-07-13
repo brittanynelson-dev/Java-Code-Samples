@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: LIGHTGRAY;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SchedulingSoftware.ApptSchedulingController">
+    <children>
+        <Button layoutX="915.0" layoutY="14.0" mnemonicParsing="false" onAction="#logoutBtnAction" style="-fx-border-color: BLACK;" text="Logout">
+            <font>
+                <Font name="Tahoma Bold" size="14.0" />
+            </font>
+        </Button>
+        <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backBtnAction" style="-fx-border-color: BLACK;" text="Back">
+            <font>
+                <Font name="Tahoma Bold" size="14.0" />
+            </font>
+        </Button>
+        <Label layoutX="247.0" layoutY="30.0" text="Appointment Scheduling">
+            <font>
+                <Font name="Tahoma" size="45.0" />
+            </font>
+        </Label>
+        <TableView fx:id="apptTableView" layoutX="26.0" layoutY="174.0" prefHeight="320.0" prefWidth="950.0">
+            <columns>
+                <TableColumn fx:id="apptCxCol" editable="false" text="Customer" />
+                <TableColumn fx:id="apptTypeCol" editable="false" prefWidth="220.0" text="Type" />
+                <TableColumn fx:id="apptAgentCol" editable="false" prefWidth="140.0" text="Agent" />
+                <TableColumn fx:id="apptStartCol" editable="false" minWidth="0.0" prefWidth="150.0" text="Start Time" />
+                <TableColumn fx:id="apptEndCol" prefWidth="60.0" text="End Time" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+        <Button layoutX="181.0" layoutY="530.0" mnemonicParsing="false" onAction="#apptAddBtnAction" prefWidth="130.0" style="-fx-border-color: BLACK;" text="Add New">
+            <font>
+                <Font name="Tahoma Bold" size="20.0" />
+            </font>
+        </Button>
+        <Button layoutX="335.0" layoutY="530.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#apptModBtnAction" prefWidth="130.0" style="-fx-border-color: BLACK;" text="Modify">
+            <font>
+                <Font name="Tahoma Bold" size="20.0" />
+            </font>
+        </Button>
+        <Button layoutX="489.0" layoutY="530.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#apptDelBtnAction" prefWidth="130.0" style="-fx-border-color: BLACK;" text="Delete">
+            <font>
+                <Font name="Tahoma Bold" size="20.0" />
+            </font>
+        </Button>
+      <Label layoutX="48.0" layoutY="103.0" text="Currently viewing:">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="429.0" layoutY="103.0" text="Time period to show:">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font></Label>
+      <RadioButton fx:id="yourApptsRB" layoutX="48.0" layoutY="136.0" mnemonicParsing="false" text="Your Appointments">
+         <toggleGroup>
+            <ToggleGroup fx:id="currentlyViewingGroup" />
+         </toggleGroup>
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="allApptsRB" layoutX="224.0" layoutY="136.0" mnemonicParsing="false" text="All Appointments" toggleGroup="$currentlyViewingGroup">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="upcomingApptsRB" layoutX="429.0" layoutY="136.0" mnemonicParsing="false" text="Upcoming Appointments">
+         <toggleGroup>
+            <ToggleGroup fx:id="timePeriodGroup" />
+         </toggleGroup>
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="allTimeApptsRB" layoutX="659.0" layoutY="136.0" mnemonicParsing="false" text="All Appointments" toggleGroup="$timePeriodGroup">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </RadioButton>
+      <Button layoutX="842.0" layoutY="120.0" mnemonicParsing="false" onAction="#refreshBtnAction" prefHeight="35.0" style="-fx-border-color: BLACK;" text="Refresh View">
+         <font>
+            <Font name="Tahoma Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="646.0" layoutY="530.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#cxMaintBtnAction" prefWidth="330.0" style="-fx-border-color: BLACK;" text="Go To Customer Maintenance">
+         <font>
+            <Font name="Tahoma Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="moreInfoBtn" layoutX="26.0" layoutY="530.0" mnemonicParsing="false" onAction="#moreInfoBtnAction" prefWidth="130.0" style="-fx-border-color: BLACK;" text="More Info">
+         <font>
+            <Font name="Tahoma Bold" size="20.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

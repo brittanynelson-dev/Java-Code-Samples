@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: LIGHTGRAY;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SchedulingSoftware.ApptDataEntryController">
+    <children>
+        <Button layoutX="915.0" layoutY="14.0" mnemonicParsing="false" onAction="#logoutBtnAction" style="-fx-border-color: BLACK;" text="Logout">
+            <font>
+                <Font name="Tahoma Bold" size="14.0" />
+            </font>
+        </Button>
+        <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#apptDataBackBtnAction" style="-fx-border-color: BLACK;" text="Back">
+            <font>
+                <Font name="Tahoma Bold" size="14.0" />
+            </font>
+        </Button>
+      <Label fx:id="addApptLbl" layoutX="251.0" layoutY="30.0" text="Create New Appointment" visible="false">
+         <font>
+            <Font name="Tahoma" size="45.0" />
+         </font>
+      </Label>
+      <Label fx:id="modApptLbl" layoutX="217.0" layoutY="30.0" text="Modify Existing Appointment" visible="false">
+         <font>
+            <Font name="Tahoma" size="45.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="124.0" text="Select customer:">
+         <font>
+            <Font name="Tahoma" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="168.0" text="Type of appointment:">
+         <font>
+            <Font name="Tahoma" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="212.0" text="Agent assigned:">
+         <font>
+            <Font name="Tahoma" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="256.0" text="Description:">
+         <font>
+            <Font name="Tahoma" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="319.0" text="Location:">
+         <font>
+            <Font name="Tahoma" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="363.0" text="URL:">
+         <font>
+            <Font name="Tahoma" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="407.0" text="Date:">
+         <font>
+            <Font name="Tahoma" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="450.0" layoutY="407.0" text="Start Time:">
+         <font>
+            <Font name="Tahoma" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="apptLocTF" layoutX="294.0" layoutY="314.0" prefWidth="500.0">
+         <font>
+            <Font name="Tahoma" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="apptUrlTF" layoutX="294.0" layoutY="358.0" prefWidth="500.0">
+         <font>
+            <Font name="Tahoma" size="16.0" />
+         </font>
+      </TextField>
+      <Button layoutX="150.0" layoutY="520.0" mnemonicParsing="false" onAction="#submitBtnAction" prefWidth="300.0" style="-fx-border-color: BLACK;" text="SUBMIT">
+         <font>
+            <Font name="Tahoma Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button layoutX="550.0" layoutY="520.0" mnemonicParsing="false" onAction="#clearBtnAction" prefWidth="300.0" style="-fx-border-color: BLACK;" text="CLEAR">
+         <font>
+            <Font name="Tahoma Bold" size="20.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="apptCxCB" layoutX="294.0" layoutY="119.0" prefWidth="500.0" promptText="Select Customer..." />
+      <Button layoutX="817.0" layoutY="140.0" mnemonicParsing="false" onAction="#modCxBtnAction" prefWidth="135.0" style="-fx-border-color: BLACK;" text="Modify Customer">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="apptTypeCB" layoutX="294.0" layoutY="165.0" prefWidth="500.0" promptText="Select Appointment Type..." />
+      <Button layoutX="817.0" layoutY="103.0" mnemonicParsing="false" onAction="#newCxBtnAction" prefWidth="135.0" style="-fx-border-color: BLACK;" text="New Customer">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </Button>
+      <ComboBox fx:id="apptAgentCB" layoutX="294.0" layoutY="207.0" prefWidth="500.0" promptText="Select Assigned Agent..." />
+      <TextArea fx:id="apptDescTA" layoutX="294.0" layoutY="249.0" prefHeight="57.0" prefWidth="500.0" />
+      <Button layoutX="817.0" layoutY="306.0" mnemonicParsing="false" onAction="#useCxAddressBtnAction" prefWidth="135.0" style="-fx-border-color: BLACK;" text="Use Customer Address" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Tahoma" size="15.0" />
+         </font>
+      </Button>
+      <DatePicker fx:id="apptDatePicker" layoutX="172.0" layoutY="402.0" />
+      <Label layoutX="450.0" layoutY="451.0" text="End Time:">
+         <font>
+            <Font name="Tahoma" size="20.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="apptStartHourCB" layoutX="589.0" layoutY="402.0" prefWidth="170.0" promptText="Select Hour..." />
+      <ComboBox fx:id="apptEndHourCB" layoutX="589.0" layoutY="446.0" prefWidth="170.0" promptText="Select Hour..." />
+      <ComboBox fx:id="apptStartMinCB" layoutX="765.0" layoutY="402.0" prefWidth="170.0" promptText="Select Minute..." />
+      <ComboBox fx:id="apptEndMinCB" layoutX="765.0" layoutY="446.0" prefWidth="170.0" promptText="Select Minute..." />
+    </children>
+</AnchorPane>

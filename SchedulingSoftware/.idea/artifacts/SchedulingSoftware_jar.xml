@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="SchedulingSoftware:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SchedulingSoftware_jar</output-path>
+    <root id="archive" name="SchedulingSoftware.jar">
+      <element id="module-output" name="SchedulingSoftware" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/mysql-connector-java-5.1.45-bin.jar" path-in-jar="/" />
+      <element id="file-copy" path="$PROJECT_DIR$/mysql-connector-java-5.1.45-bin.jar" />
+    </root>
+  </artifact>
+</component>

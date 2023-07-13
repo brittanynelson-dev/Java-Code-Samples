@@ -1,0 +1,5 @@
+admin,Asia/Tokyo
+user,America/New_York
+phoenixuser,America/Phoenix
+londonuser,Europe/London
+newyorkuser,America/New_York
