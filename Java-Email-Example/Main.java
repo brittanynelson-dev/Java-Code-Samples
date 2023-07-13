@@ -6,43 +6,43 @@ import javax.activation.*;
 public class Main {
 
     public static void main(String [] args) {
-        // Recipient's email ID needs to be mentioned.
+        //Recipient's email ID needs to be mentioned.
         String to = "firstname.lastname@website.com";
 
-        // Sender's email ID needs to be mentioned
+        //Sender's email ID needs to be mentioned
         String from = "Sender@website.com";
 
-        // Assuming you are sending email from localhost
+        //Assuming you are sending email from localhost
         String host = "localhost";
 
-        // Get system properties
+        //Get system properties
         Properties properties = System.getProperties();
 
-        // Setup mail server
+        //Setup mail server
         properties.setProperty("mail.smtp.host", host);
 
-        // Get the default Session object.
+        //Get the default Session object.
         Session session = Session.getDefaultInstance(properties);
 
         try {
-            // Create a default MimeMessage object.
+            //Create a default MimeMessage object.
             MimeMessage message = new MimeMessage(session);
 
-            // Set From: header field of the header.
+            //Set From: header field of the header.
             message.setFrom(new InternetAddress(from));
 
-            // Set To: header field of the header.
+            //Set To: header field of the header.
             message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 
-            // Set Subject: header field
-            message.setSubject("This is the Subject Line!");
+            //Set Subject: header field
+            message.setSubject("This is the Subject Line.");
 
-            // Now set the actual message
-            message.setText("This is the message");
+            //Now set the actual message
+            message.setText("This is the message.");
 
-            // Send message
+            //Send message
             Transport.send(message);
-            System.out.println("Sent message successfully....");
+            System.out.println("Sent message successfully.");
         } catch (MessagingException mex) {
             mex.printStackTrace();
         }
