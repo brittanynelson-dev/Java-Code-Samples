@@ -1,7 +1,6 @@
 /**
- * Created by Brittany Nelson on 6/12/2017. This is a simple example of a timer designed to display a popup after a set period of time.
+ * This is a simple example of a timer designed to display a JavaFX popup message after a set period of time.
  */
-
 import javafx.animation.*;
 import javafx.application.Application;
 import javafx.scene.*;
@@ -11,9 +10,7 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 
-
-
-public class TimerTest extends Application {
+public class Main extends Application {
 
     public void start (Stage primaryStage) throws Exception {
 
@@ -21,7 +18,7 @@ public class TimerTest extends Application {
         Group root = new Group();
 
         //Construct popup window
-        Scene popup = new Scene(root, 400, 100);
+        Scene popup = new Scene(root, 500, 120);
 
         Pane p = new Pane();
 
@@ -32,7 +29,7 @@ public class TimerTest extends Application {
         primaryStage.setScene(popup);
 
         //Create a Text object to display an error message
-        Text t = new Text("Your session has expired, please copy all unsaved work to retain it.");
+        Text t = new Text("Your time is up!");
         t.setX(20);
         t.setY(50);
 
