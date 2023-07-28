@@ -6,10 +6,10 @@ import javax.activation.*;
 public class Main {
 
     public static void main(String [] args) {
-        //Recipient's email ID needs to be mentioned.
+        //Recipient's email ID:
         String to = "firstname.lastname@website.com";
 
-        //Sender's email ID needs to be mentioned
+        //Sender's email ID:
         String from = "Sender@website.com";
 
         //Assuming you are sending email from localhost
